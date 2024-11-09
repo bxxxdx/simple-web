@@ -1,4 +1,4 @@
-## ec2 s3 deploy122
+## ec2 s3 deploy
 name: Deploy to AWS
 on:
   push:
