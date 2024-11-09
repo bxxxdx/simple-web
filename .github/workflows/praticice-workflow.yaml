@@ -1,18 +1,10 @@
 name: practice-workflow
-on:
-  push:
-  pull_request:
+on: [push, pull_request]
 jobs:
-  test:
+  check-python:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the code
-        uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-      - name: Display Python version
+      - name: Check Python Version
         run: python --version
-      - name: Display pip version
+      - name: Check pip version
         run: pip --version
